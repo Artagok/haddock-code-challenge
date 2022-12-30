@@ -14,11 +14,12 @@ export default class MyOrderHandler implements OrderHandler {
   }
 
   add = (id: number, quantity: number) => {
+    let i = ITEMS.find((i) => i.id === id);
     this.items.push({
       id,
-      name: ITEMS.find((i) => i.id === id)?.name ?? "",
+      name: i?.name ?? "",
       quantity,
-      price: ITEMS.find((i) => i.id === id)?.price ?? -1,
+      price: i?.price ?? -1,
     });
   };
 
@@ -34,7 +35,7 @@ export default class MyOrderHandler implements OrderHandler {
 
   discountFunctions = {
     menuPack: ({ packs }: { packs: { items: number[]; price: number }[] }) => {
-      // For eack menu pack
+      // For each menu pack
       let total = 0;
       packs.forEach((pack) => {
         const menu = this.items.filter((i) => pack.items.includes(i.id));

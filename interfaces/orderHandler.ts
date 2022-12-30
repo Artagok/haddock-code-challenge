@@ -36,11 +36,12 @@ interface OrderHandler {
     }) => number;
     // Group items in groups of X, X-1 items are free.
     // i.e: 2-for-1, every 2, 1 is free; 3-for-1, every 3, 2 are free, etc.
-    // Works for any X and any Y (Extensibility)
+    // Works for any X (Extensibility)
     xFor1: ({ items, X }: { items: number[]; X: number }) => number;
     // Last discount to be applied, as it only takes into account the resulting
     // total price after every item-specific discounts have been applied
     // Return Y discount if total price amounts to X or more
+    // Works for any X and any Y (Extensibility)
     spendXsaveY: ({ X, Y }: { X: number; Y: number }) => number;
   };
 }
