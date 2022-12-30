@@ -6,13 +6,62 @@
 import MyOrderHandler from "./orderHandler";
 import { OrderHandler } from "./interfaces/orderHandler";
 
-const orderHandler: OrderHandler = new MyOrderHandler();
+import colorString from "./utils/colorString";
 
-orderHandler.add(12, 8);
-orderHandler.add(21, 1);
-orderHandler.add(37, 3);
+import TESTS from "./tests/tests.json";
 
-const total = orderHandler.getTotal();
+// Seconds to wait between each test run
+const SECONDS = 1;
 
-console.log(total); // 16.00€
-console.log(orderHandler.items);
+// Run all tests sequentially
+TESTS.forEach(({ order, expectedPrice }, i) => {
+  setTimeout(() => {
+    console.log(
+      colorString({
+        string: `Running test ${i + 1}`,
+        backGround: "BgYellow",
+        foreGround: "FgBlack",
+        bold: true,
+        spaceAround: true,
+      }),
+      ""
+    );
+
+    let orderHandler: OrderHandler = new MyOrderHandler();
+
+    order.forEach(({ id, quantity }) => {
+      orderHandler.add(id, quantity);
+    });
+
+    console.table(orderHandler.getItems());
+
+    const ep = `${expectedPrice.toFixed(2)}€`;
+    console.log(
+      `Expected total price: ${colorString({
+        string: ep,
+        bold: true,
+        foreGround: "FgYellow",
+      })}`
+    );
+
+    const total = orderHandler.getTotal();
+    console.log(
+      `Computed total price: ${colorString({
+        string: total,
+        bold: true,
+        foreGround: "FgYellow",
+      })}`
+    );
+
+    const pass = ep === total;
+    console.log(
+      `${pass ? "✔️" : "❌"} ${colorString({
+        string: `Test ${i + 1} ${pass ? "passed" : "failed"}`,
+        foreGround: pass ? "FgGreen" : "FgRed",
+        spaceAround: true,
+        bold: true,
+      })}`,
+      "\n\n"
+    );
+  }, SECONDS * 1e3 * i + 1);
+});

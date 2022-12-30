@@ -13,6 +13,9 @@ interface OrderHandler {
   // It also automatically loads price for each item from source (JSON/DB)
   add: (id: number, quantity: number) => void;
 
+  // Returns the current order (items)
+  getItems: () => Item[];
+
   // Returns total price for the order
   // It is important to note that discounts are applied sequentially
   // following their priority value (ascending order, 0: highest priority)

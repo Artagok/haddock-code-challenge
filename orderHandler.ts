@@ -22,6 +22,8 @@ export default class MyOrderHandler implements OrderHandler {
     });
   };
 
+  getItems = () => this.items;
+
   getTotal = () => {
     // Apply discounts in specified order (ascending by priority)
     DISCOUNTS.sort((a, b) => a.priority - b.priority).forEach((discount) => {

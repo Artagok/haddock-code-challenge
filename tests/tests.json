@@ -1,0 +1,108 @@
+[
+  {
+    "order": [
+      { "id": 12, "quantity": 4 },
+      { "id": 21, "quantity": 2 }
+    ],
+    "expectedPrice": 16
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 8 },
+      { "id": 21, "quantity": 1 },
+      { "id": 37, "quantity": 3 }
+    ],
+    "expectedPrice": 40
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 2 },
+      { "id": 21, "quantity": 4 },
+      { "id": 37, "quantity": 5 }
+    ],
+    "expectedPrice": 54.5
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 3 },
+      { "id": 21, "quantity": 1 },
+      { "id": 37, "quantity": 1 }
+    ],
+    "expectedPrice": 18.5
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 6 },
+      { "id": 21, "quantity": 1 },
+      { "id": 37, "quantity": 1 }
+    ],
+    "expectedPrice": 22.5
+  },
+
+  {
+    "order": [
+      { "id": 21, "quantity": 2 },
+      { "id": 37, "quantity": 3 }
+    ],
+    "expectedPrice": 26.5
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 4 },
+      { "id": 37, "quantity": 1 }
+    ],
+    "expectedPrice": 15.5
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 11 },
+      { "id": 21, "quantity": 3 },
+      { "id": 37, "quantity": 5 }
+    ],
+    "expectedPrice": 68
+  },
+
+  {
+    "order": [{ "id": 37, "quantity": 3 }],
+    "expectedPrice": 19.5
+  },
+
+  {
+    "order": [{ "id": 21, "quantity": 6 }],
+    "expectedPrice": 31
+  },
+
+  {
+    "order": [{ "id": 12, "quantity": 7 }],
+    "expectedPrice": 18
+  },
+
+  {
+    "order": [{ "id": 12, "quantity": 17 }],
+    "expectedPrice": 35.5
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 9 },
+      { "id": 21, "quantity": 9 },
+      { "id": 37, "quantity": 9 }
+    ],
+    "expectedPrice": 121
+  },
+
+  {
+    "order": [
+      { "id": 12, "quantity": 2 },
+      { "id": 21, "quantity": 1 },
+      { "id": 37, "quantity": 1 }
+    ],
+    "expectedPrice": 18.5
+  }
+]
