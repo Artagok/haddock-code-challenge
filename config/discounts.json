@@ -1,0 +1,27 @@
+[
+  {
+    "name": "X-for-1",
+    "X": 2,
+    "items": [12],
+    "priority": 1,
+    "id": "xFor1"
+  },
+  {
+    "name": "Spend X save Y",
+    "X": 20,
+    "Y": 5,
+    "priority": 2,
+    "id": "spendXsaveY"
+  },
+  {
+    "name": "Menu pack promotion",
+    "packs": [
+      {
+        "items": [12, 21, 37],
+        "price": 14
+      }
+    ],
+    "priority": 0,
+    "id": "menuPack"
+  }
+]

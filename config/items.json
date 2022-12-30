@@ -1,0 +1,5 @@
+[
+  { "id": 12, "name": "Spring rolls", "price": 4.5 },
+  { "id": 21, "name": "Fried rice with pork", "price": 6.0 },
+  { "id": 37, "name": "Chicken with almond sauce", "price": 6.5 }
+]

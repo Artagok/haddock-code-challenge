@@ -1,0 +1,19 @@
+{
+  "name": "haddock-code-challenge",
+  "version": "1.0.0",
+  "description": "Code challenge for the hiring process of Haddock",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npx -y ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artagok/haddock-code-challenge.git"
+  },
+  "author": "Artagok (Pau Nunez)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artagok/haddock-code-challenge/issues"
+  },
+  "homepage": "https://github.com/Artagok/haddock-code-challenge#readme"
+}
