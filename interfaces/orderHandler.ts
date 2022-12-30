@@ -12,6 +12,7 @@ interface OrderHandler {
   // Adds item with @id with a set @quantity to the items list
   // It also automatically loads price for each item from source (JSON/DB)
   add: (id: number, quantity: number) => void;
+
   // Returns total price for the order
   // It is important to note that discounts are applied sequentially
   // following their priority value (ascending order, 0: highest priority)
@@ -19,6 +20,7 @@ interface OrderHandler {
   // 1 - X-for-1
   // 2 - Spend X save Y
   getTotal: () => string;
+
   // Object grouping all discount functions
   discountFunctions: {
     // Set of items that go together and amount to a specific set price
@@ -38,9 +40,6 @@ interface OrderHandler {
     // Return Y discount if total price amounts to X or more
     spendXsaveY: ({ X, Y }: { X: number; Y: number }) => number;
   };
-
-  // TODO: Delete before sending
-  printConstants: () => void;
 }
 
 export { OrderHandler };
